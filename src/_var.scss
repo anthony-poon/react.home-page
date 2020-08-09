@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$theme-color: #9381FF;
+$theme-color-tints-1: #BAADFF;
+$theme-color-tints-2: #DCD6FF;
+$theme-color-shade-1: #745CFF;
+$theme-color-shade-2: #5233FF;
+
+.text-theme {
+    color: $theme-color;
+}

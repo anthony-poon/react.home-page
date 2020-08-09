@@ -1,0 +1,172 @@
+@import "../../var";
+
+@font-face {
+    font-family: "RalewayBlack";
+    src: url("../../fonts/Raleway-Black.ttf");
+}
+
+@font-face {
+    font-family: "RalewayLight";
+    src: url("../../fonts/Raleway-Light.ttf");
+}
+
+
+.hero-image__container {
+    position: relative;
+    height: 95vh;
+    padding: map-get($spacers, 5) map-get($spacers, 4);
+    box-shadow: $box-shadow-sm;
+    display: flex;
+    flex-direction: column;
+    background-color: $theme-color;
+    @include media-breakpoint-up(md) {
+        padding: map-get($spacers, 5);
+    }
+
+    .hero-image__text-container {
+        flex-grow: 1;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .hero-image__line-1 {
+            color: $gray-400;
+            filter: opacity(0.4);
+            font-size: $display4-size;
+            font-family: "RalewayBlack", sans-serif;
+            line-height: $display4-size;
+            margin-bottom: map-get($spacers, 1);
+        }
+
+        .hero-image__line-2 {
+            font-size: $display3-size;
+            letter-spacing: map-get($spacers, 2);
+            font-family: "RalewayBlack", sans-serif;
+            line-height: $display3-size;
+            color: $theme-color-tints-2;
+            margin-bottom: map-get($spacers, 5);
+        }
+
+        .hero-image__line-3 {
+            color: $gray-400;
+            filter: opacity(0.4);
+            font-size: $display4-size;
+            font-family: "RalewayBlack", sans-serif;
+            line-height: $display4-size;
+            margin-bottom: map-get($spacers, 1);
+        }
+
+        .hero-image__line-4 {
+            font-size: $display4-size;
+            color: $theme-color-tints-2;
+            font-family: "RalewayLight", sans-serif;
+            line-height: $display4-size;
+        }
+    }
+
+    .hero-image__footer {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        .hero-image__footer-icon {
+            color: $theme-color-tints-2;
+            cursor: pointer;
+            font-size: $h3-font-size;
+            display: flex;
+            align-items: center;
+            margin-right: map-get($spacers, 4);
+        }
+
+        .hero-image__footer-icon:hover {
+            color: $gray-400;
+            transition: 0.4s;
+        }
+    }
+
+    .hero-image__bg-container {
+        user-select: none;
+        position: absolute;
+        bottom: 2rem;
+        right: 0;
+        z-index: 1;
+        filter: opacity(0.1);
+        overflow: hidden;
+        text-align: right;
+
+        .hero-image__bg-text-1, .hero-image__bg-text-2, .hero-image__bg-text-3, .hero-image__bg-text-4 {
+            font-family: "RalewayBlack", sans-serif;
+            color: $gray-400;
+            font-size: 145px;
+            line-height: 125px;
+            letter-spacing: 1rem;
+        }
+
+        .hero-image__bg-text-1 {
+            letter-spacing: 3rem;
+        }
+
+        .hero-image__bg-text-2 {
+            margin-right: -3rem;
+        }
+
+        .hero-image__bg-text-3 {
+            margin-right: 2rem;
+        }
+
+        .hero-image__bg-text-4 {
+            margin-right: -2rem;
+            letter-spacing: 0.7rem;
+        }
+    }
+
+}
+
+.section-1__container {
+    min-height: 90vh;
+    .section-1__hexagon-wrapper {
+        display: inline-block;
+        .section-1__hexagon {
+            position: relative;
+            width: 80px;
+            height: 46.19px;
+            background-color: $theme-color-tints-1;
+            margin: 23.09px 0;
+        }
+        .section-1__hexagon:before,
+        .section-1__hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+        }
+
+        .section-1__hexagon:before {
+            bottom: 100%;
+            border-bottom: 23.09px solid $theme-color-tints-1;
+        }
+
+        .section-1__hexagon:after {
+            top: 100%;
+            width: 0;
+            border-top: 23.09px solid $theme-color-tints-1;
+        }
+        .section-1__hexagon-text {
+            padding-top: map-get($spacers, 3);
+            text-align: center;
+            color: $gray-700;
+            font-size: $h4-font-size;
+        }
+        .section-1__hexagon-icon {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $light;
+            font-size: $h1-font-size;
+        }
+    }
+
+}
